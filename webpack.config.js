@@ -1,6 +1,7 @@
+const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-var path = require('path');
-var webpack = require('webpack');
+const autoprefixer = require('autoprefixer');
+const webpack = require('webpack');
 
 module.exports = {
   entry: './assets/js/index.js',
@@ -32,6 +33,12 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin('style.css')
-  ]
+        new ExtractTextPlugin('style.css'),
+        new webpack.LoaderOptionsPlugin({
+            minimize: true,
+            options: {
+                postcss: [autoprefixer]
+            }
+        })
+    ]
 };

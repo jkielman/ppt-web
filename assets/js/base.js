@@ -18,14 +18,6 @@ const colorArray = ['#44E3C1', '#FC5A4C', '#FB4AAC'],
 
 Array.from(selectors.utility).forEach(utilityTitle => {
 
-    utilityTitle.addEventListener('click', function() {
-
-       DOM.getTitle.innerHTML = `${this.title}`;
-       DOM.getTitle.style.color = randomColor;
-       this.classList.add('scale--selected');
-
-    });
-
     utilityTitle.addEventListener('mouseover', function() {
 
     DOM.getTitle.innerHTML = `${this.title}`;
@@ -33,15 +25,6 @@ Array.from(selectors.utility).forEach(utilityTitle => {
     this.classList.className = 'scale--selected';
 
     }, false);
-
-
-
-
-
-
-
-
-
 
 });
 
@@ -90,7 +73,7 @@ let scrollPos = window.scrollY;
           DOM.phone.classList.remove('fix');
       }
 
-      if(scrollPos > 900){
+      if(scrollPos > 500){
           DOM.vid1.classList.remove('opac--full'), DOM.vid2.classList.add('opac--full');
       } else {
           DOM.vid1.classList.add('opac--full'), DOM.vid2.classList.remove('opac--full');
