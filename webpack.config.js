@@ -29,6 +29,11 @@ module.exports = {
           limit: 10000,
           name: 'assets/imgs/[name].[hash:8].[ext]'
         }
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        exclude: /node_modules/,
+        loader: 'file-loader'
       }
     ]
   },

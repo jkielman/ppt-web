@@ -73,7 +73,7 @@ let scrollPos = window.scrollY;
           DOM.phone.classList.remove('fix');
       }
 
-      if(scrollPos > 500){
+      if(scrollPos > 800){
           DOM.vid1.classList.remove('opac--full'), DOM.vid2.classList.add('opac--full');
       } else {
           DOM.vid1.classList.add('opac--full'), DOM.vid2.classList.remove('opac--full');
