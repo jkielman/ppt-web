@@ -9,7 +9,7 @@ body {
     font-style: normal;
     font-weight: 400;
     font-size: 1em;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-family:'Inter UI',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
     margin: 0;
     box-sizing: border-box;
     line-height: 1.2;
@@ -322,24 +322,30 @@ img {
      }
 
     .video__intro {
-        position: absolute;
-        top: 84px;
-        left: 24px;
-        width: 254px;
-        height: 423px;
-        background: #000;
-        z-index: 10;
+            position: absolute;
+    top: 78px;
+    left: 20px;
+    width: 260px;
+    background: $bg;
+    z-index: 10;
+    overflow: hidden;
+    height: 460px;
+
     }
 
     video {
-         width: 254px;
+         width: 100%;
         z-index: 10;
         position: relative;
     }
 
     #video__one {
         transition: all 0.5s ease;
-        opacity: 0;
+        opacity: 1;
+
+        @media (min-width: $desktop) {
+            opacity: 0;
+        }
 
         &.opac--full {
             opacity: 1;
@@ -377,7 +383,7 @@ img {
     position: absolute;
 
 
-        @media (min-width: $desktop) {
+        @media (min-width: $desktop-sm) {
         width: 120px;
         height: 120px;
         }
@@ -385,7 +391,7 @@ img {
     &.appreciate {
         top:150px;
         right:80px;
-        @media (min-width: $desktop) {
+        @media (min-width: $desktop-sm) {
         top:300px;
         right:auto;
         left: 0;
@@ -395,7 +401,7 @@ img {
 
     &.yum {
         top: -160px;
-        @media (min-width: $desktop) {
+        @media (min-width: $desktop-sm) {
         top: 120px;
         left:-40px;
         }
@@ -404,7 +410,7 @@ img {
     &.toss {
         top: -150px;
         right:35px;
-        @media (min-width: $desktop) {
+        @media (min-width: $desktop-sm) {
         top: 130px;
         right:auto;
         left: 140px;
@@ -414,7 +420,7 @@ img {
     &.love {
         top: -60px;
         right:40px;
-        @media (min-width: $desktop) {
+        @media (min-width: $desktop-sm) {
             left: auto;
             right: 0;
             top: 280px;
@@ -427,7 +433,7 @@ img {
         top: -150px;
         right:120px;
 
-        @media (min-width: $desktop) {
+        @media (min-width: $desktop-sm) {
             top:-50px;
             right:auto;
             left: -50px;
@@ -441,7 +447,7 @@ img {
         left:90px;
 
 
-        @media (min-width: $desktop) {
+        @media (min-width: $desktop-sm) {
             top: 150px;
             left:auto;
             right: 120px;
@@ -453,7 +459,7 @@ img {
         top: -80px;
         left:50px;
 
-        @media (min-width: $desktop) {
+        @media (min-width: $desktop-sm) {
             top:-140px;
             right: 150px;
             left:auto;
@@ -466,7 +472,7 @@ img {
         right:20px;
 
 
-        @media (min-width: $desktop) {
+        @media (min-width: $desktop-sm) {
         top: 0;
         right: -50px;
         }
@@ -477,7 +483,7 @@ img {
         top:60px;
         left:20px;
 
-        @media (min-width: $desktop) {
+        @media (min-width: $desktop-sm) {
         top: -140px;
         left:170px;
         }
@@ -488,7 +494,7 @@ img {
         top:140px;
         left:60px;
 
-        @media (min-width: $desktop) {
+        @media (min-width: $desktop-sm) {
         top: 140px;
         right:-100px;
         left:auto;
@@ -504,7 +510,7 @@ img {
     width:100%;
     max-width:400px;
     position: relative;
-    margin:0 0 0 0;
+    margin:0 auto;
          @media (min-width: $desktop) {
           margin:5em 0 20em 2em;
          }
@@ -553,14 +559,16 @@ img {
     position: absolute;
     width: 100px;
     top: 250px;
-    left: 50px;
+    right: 50px;
+
 }
 
 .radar__yum {
     position: absolute;
     width: 100px;
     top: 250px;
-    right: 50px;
+    left: 50px;
+
 }
 
 
@@ -637,14 +645,16 @@ a.social {
 }
 
 #slide-app {
-  width:254px;
+  width:260px;
   overflow:hidden;
 
   .slide {
-    width:1016px;
+    width:1040px;
     animation: 10s linear infinite slideframe;
   position: relative;
   transform-origin: 100% 100%;
+  animation-direction: normal, reverse;
+
   }
 
 }
@@ -655,17 +665,18 @@ a.social {
     margin-left:0;
   }
   25%,45%   {
-    margin-left:-254px;
+    margin-left:-260px;
   }
   50%,70% {
-    margin-left:-508px;
+    margin-left:-520px;
   }
   75%,95% {
-    margin-left:-762px;
+    margin-left:-780px;
   }
   100% {
-    margin-left:0;
+    margin-left:-780px;
   }
+
 }
 
 

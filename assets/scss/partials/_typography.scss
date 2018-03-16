@@ -1,10 +1,30 @@
 
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  normal;
+  font-weight: 400;
+  src: url('../../assets/fonts/Inter-UI-Regular.woff2') format('woff2'),
+       url('../../assets/fonts/Inter-UI-Regular.woff') format('woff');
+}
+
+
+
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  normal;
+  font-weight: 700;
+  src: url('../../assets/fonts/Inter-UI-Bold.woff2') format('woff2'),
+       url('../../assets/fonts/Inter-UI-Bold.woff') format('woff');
+}
+
+
 html { font-size: 100%; }
 body { font-size: 1.6rem; }
 
 h1 {
 
 	 font-size: 1.5rem;
+	 font-weight: 400;
 
 }
 

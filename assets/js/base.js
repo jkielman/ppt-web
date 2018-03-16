@@ -16,6 +16,10 @@ const selectors = {
 const colorArray = ['#44E3C1', '#FC5A4C', '#FB4AAC'],
       randomColor = colorArray[Math.floor(Math.random()*colorArray.length)];
 
+
+
+
+
 Array.from(selectors.utility).forEach(utilityTitle => {
 
     utilityTitle.addEventListener('mouseover', function() {
